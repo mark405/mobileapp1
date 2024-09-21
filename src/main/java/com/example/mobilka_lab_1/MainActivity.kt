@@ -10,13 +10,13 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.example.mobilka_lab_1.ui.theme.Mobilkalab1Theme
+import com.example.mobilka_lab_1.ui.theme.ColorTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            Mobilkalab1Theme {
+            ColorTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     LazyColumn(modifier = Modifier.padding(innerPadding)) {
                         item {
@@ -302,7 +302,7 @@ fun calculatePercentageSum(h: Double, c: Double, s: Double, n: Double, o: Double
 @Preview(showBackground = true)
 @Composable
 fun DefaultPreview() {
-    Mobilkalab1Theme {
+    ColorTheme {
         Column {
             FuelCalculator()
             FuelOilCalculator()
